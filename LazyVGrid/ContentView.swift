@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let myData = Array(1...2000).map({ (number: Int) in
+        return "\(number) 번"
+    })
+    
     var body: some View {
-        LazyVStack {
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-        }
+        ScrollView{
+            LazyVStack {
+                Text("Hello, world!")
+                Text("Hello, world!")
+                Text("Hello, world!")
+                Text("Hello, world!")
+                Text("Hello, world!")
+                Text("Hello, world!")
+                Text("Hello, world!")
+            } // LazyVStack
+        } // ScrollView
     }
 }
 
